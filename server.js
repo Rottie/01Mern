@@ -5,10 +5,22 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
+<<<<<<< HEAD
   origin: "http://localhost:3000"
 };
 
 
+=======
+  origin: "http://localhost:8081"
+};
+
+
+
+
+
+
+
+>>>>>>> 5742268fe11c8d2d45e3fc4296258ec6684424f3
 app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
@@ -17,12 +29,16 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 require("./routes/tutorial.routes")(app);
+<<<<<<< HEAD
 require('./routes/auth.routes')(app);
 require('./routes/user.routes')(app);
 //Database
 const db = require("./models");
 const Role = db.role;
 
+=======
+const db = require("./models");
+>>>>>>> 5742268fe11c8d2d45e3fc4296258ec6684424f3
 db.mongoose
   .connect(db.url, {
     useNewUrlParser: true,
@@ -30,7 +46,10 @@ db.mongoose
   })
   .then(() => {
     console.log("Connected to the database!");
+<<<<<<< HEAD
     initial();
+=======
+>>>>>>> 5742268fe11c8d2d45e3fc4296258ec6684424f3
   })
   .catch(err => {
     console.log("Cannot connect to the database!", err);
@@ -47,6 +66,7 @@ app.get("/", (req, res) => {
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
+<<<<<<< HEAD
 });
 
 
@@ -69,3 +89,6 @@ async function initial() {
     console.error("Error initializing roles:", err);
   }
 }
+=======
+});
+>>>>>>> 5742268fe11c8d2d45e3fc4296258ec6684424f3

@@ -5,13 +5,9 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-<<<<<<< HEAD
-  origin: "http://localhost:3000"
-};
 
 
-=======
-  origin: "http://localhost:8081"
+  origin: "https://magnificent-trifle-45021f.netlify.app"
 };
 
 

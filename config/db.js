@@ -1,3 +1,3 @@
 module.exports = {
-    url: "mongodb://localhost:27017/mern"
+    url: "mongodb+srv://root:roti9599@cluster0.svcvryl.mongodb.net/?retryWrites=true&w=majority"
   };

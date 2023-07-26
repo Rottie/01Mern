@@ -5,18 +5,10 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-
-
   origin: "https://magnificent-trifle-45021f.netlify.app"
 };
 
 
-
-
-
-
-
->>>>>>> 5742268fe11c8d2d45e3fc4296258ec6684424f3
 app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
@@ -25,16 +17,14 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 require("./routes/tutorial.routes")(app);
-<<<<<<< HEAD
 require('./routes/auth.routes')(app);
 require('./routes/user.routes')(app);
 //Database
 const db = require("./models");
 const Role = db.role;
 
-=======
 const db = require("./models");
->>>>>>> 5742268fe11c8d2d45e3fc4296258ec6684424f3
+
 db.mongoose
   .connect(db.url, {
     useNewUrlParser: true,
@@ -42,10 +32,7 @@ db.mongoose
   })
   .then(() => {
     console.log("Connected to the database!");
-<<<<<<< HEAD
     initial();
-=======
->>>>>>> 5742268fe11c8d2d45e3fc4296258ec6684424f3
   })
   .catch(err => {
     console.log("Cannot connect to the database!", err);
@@ -85,6 +72,6 @@ async function initial() {
     console.error("Error initializing roles:", err);
   }
 }
-=======
+
 });
->>>>>>> 5742268fe11c8d2d45e3fc4296258ec6684424f3
+
